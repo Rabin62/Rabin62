@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enchanted Garden - Venue Detail</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .bg-gradient-to-r {
+            background-image: linear-gradient(to right, #faf5ff, #fce7f3);
+        }
+        .from-purple-100 {
+            --tw-gradient-from: #f3e8ff;
+            --tw-gradient-to: rgb(243 232 255 / 0);
+            --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+        }
+        .to-pink-100 {
+            --tw-gradient-to: #fce7f3;
+        }
+        .view-menu-btn {
+            background-color: #8B5CF6;
+            color: white;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(139, 92, 246, 0.25);
+            border: 2px solid #8B5CF6;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .view-menu-btn:hover {
+            background-color: white;
+            color: #8B5CF6;
+            box-shadow: 0 6px 8px rgba(139, 92, 246, 0.4);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-r from-purple-50 to-pink-50">
+<nav class="bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <div class="flex items-center">
+                <span class="text-2xl font-bold text-white">VenueBook</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="index.html" class="text-white hover:bg-white/20 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">Home</a>
+                <a href="venues.html" class="text-white hover:bg-white/20 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">Venues</a>
+                <a href="#" class="text-white hover:bg-white/20 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">About</a>
+                <a href="#" class="text-white hover:bg-white/20 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">Contact</a>
+                <button class="text-white border border-white hover:bg-white hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">Log in</button>
+                <button class="bg-white text-purple-600 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">Sign up</button>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white p-2">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="index.html" class="text-white hover:bg-white/20 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+            <a href="venues.html" class="text-white hover:bg-white/20 block px-3 py-2 rounded-md text-base font-medium">Venues</a>
+            <a href="#" class="text-white hover:bg-white/20 block px-3 py-2 rounded-md text-base font-medium">About</a>
+            <a href="#" class="text-white hover:bg-white/20 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+        </div>
+        <div class="pt-4 pb-3 border-t border-white/20">
+            <div class="flex items-center px-5">
+                <button class="w-full text-white border border-white hover:bg-white hover:text-purple-600 px-3 py-2 rounded-md text-base font-medium mr-2">Log in</button>
+                <button class="w-full bg-white text-purple-600 hover:bg-gray-200 px-3 py-2 rounded-md text-base font-medium">Sign up</button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container mx-auto p-6">
+    <div class="flex flex-col sm:flex-row items-center mb-6">
+        <div class="flex items-center mb-4 sm:mb-0">
+            <img src="https://scontent.fktm3-1.fna.fbcdn.net/v/t39.30808-6/299990033_453094566873214_8494190201156505532_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGgam60y9lbH-aDeMCTLv8SkzITutv-u7STMhO62_67tEBmpR0MKGOOzLR0iFgXBeBxO4rlaj9Sk6gDuCYya7o0&_nc_ohc=1VnSZpipNDwQ7kNvgFCCDHo&_nc_ht=scontent.fktm3-1.fna&_nc_gid=A_qNWfsN71ONV399yxkHNYD&oh=00_AYCDS2uQeOjoyWRpbRZlF1HdHrAxcET5FEJem1L10YzY4Q&oe=66EDC6E4" alt="Venue Logo" class="w-[100px] h-[100px] rounded-full mr-4">
+            <h1 class="text-3xl sm:text-4xl font-bold text-purple-800">Chhetrapati Party Palace</h1>
+        </div>
+        <div class="mt-4 sm:mt-0 sm:ml-auto">
+            <button id="view-menu-btn" class="view-menu-btn">
+                <i class="fas fa-utensils mr-2"></i>
+                View Menu
+            </button>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="relative h-[300px] md:h-[400px]" id="image-slider">
+            <img src="" alt="Enchanted Garden" class="w-full h-full object-cover rounded-lg">
+            <div class="absolute bottom-4 left-0 right-0 flex justify-center" id="slider-dots"></div>
+        </div>
+
+        <div>
+            <div class="bg-gradient-to-r from-purple-100 to-pink-100 rounded-lg p-6 mb-6">
+                <h2 class="text-2xl font-bold text-purple-800 mb-4">Venue Details</h2>
+                <p class="text-gray-600">A magical outdoor venue perfect for weddings and special events. Surrounded by lush greenery and twinkling lights, the Enchanted Garden offers a fairy-tale setting for your memorable occasion.</p>
+                <p class="mb-2"><strong>Location:</strong> Kathmandu, Nepal</p>
+                <p class="mb-2"><strong>Contact No.:</strong> 01-4215036, 4254232</p>
+                <p class="mb-2"><strong>E-mail:</strong><a href="mailto:chhetrapatipp@gmail.com" > chhetrapatipp@gmail.com</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+        <div class="bg-gradient-to-r from-purple-100 to-pink-100 rounded-lg p-6">
+            <h2 class="text-2xl font-bold text-purple-800 mb-4">Venue Video</h2>
+            <div class="aspect-w-16 aspect-h-9">
+                <iframe class="w-full h-[300px] rounded-lg" src="https://www.youtube.com/embed/5vnk-tQ4y-U?si=p3NK0kUcVwQeRGP-" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="bg-gradient-to-r from-purple-100 to-pink-100 rounded-lg p-6">
+            <h2 class="text-2xl font-bold text-purple-800 mb-4">Location</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.176278921553!2d85.30507487486429!3d27.711843076179875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb18fbee40f4a9%3A0x9cdfd27b898e400!2sChhetrapati%20Party%20Palace!5e0!3m2!1sen!2snp!4v1726481069264!5m2!1sen!2snp" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <div id="menu-section" class="bg-gradient-to-r from-purple-100 to-pink-100 rounded-lg p-6 mt-8">
+        <h2 class="text-2xl font-bold text-purple-800 mb-4">Menu</h2>
+        <div class="flex flex-col md:flex-row gap-6">
+            <div class="w-full md:w-2/3">
+                <div class="bg-purple-200 rounded-lg mb-4">
+                    <button class="px-4 py-2 rounded-lg bg-purple-400 text-white" onclick="changeTab('snacks')">Snacks</button>
+                    <button class="px-4 py-2 rounded-lg" onclick="changeTab('breakfast')">Breakfast</button>
+                    <button class="px-4 py-2 rounded-lg" onclick="changeTab('dinner')">Dinner</button>
+                </div>
+                <div id="menu-content"></div>
+            </div>
+            <div class="w-full md:w-1/3">
+                <div class="bg-gradient-to-r from-purple-100 to-pink-100 rounded-lg p-4">
+                    <h3 class="text-xl font-bold text-purple-800 mb-2">Selected Items</h3>
+                    <div id="selected-items"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="flex justify-end mt-8">
+        <button class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">
+            Book Now
+        </button>
+    </div>
+</div>
+
+<script>
+    const venueImages = [
+        "https://scontent.fktm3-1.fna.fbcdn.net/v/t39.30808-6/454331912_3158851444250587_3264134144470141651_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeGbxwvh4XcK_THIm-UmglOCyrGHZmmakbHKsYdmaZqRsfYxxaoHR_QiISQqgES-otVj9pnXZn6426Wu_MlYRbwq&_nc_ohc=nhSErFRozUUQ7kNvgGOFlpC&_nc_ht=scontent.fktm3-1.fna&_nc_gid=ArguIpJuVpR-CTQm0njOxMt&oh=00_AYDgBXPnRWRgdWU8TQDK9TLadamFdwLVVJ0T9rYD16rBzQ&oe=66EDC026",
+        "https://scontent.fktm3-1.fna.fbcdn.net/v/t39.30808-6/431517299_796961805819820_5671211883589778656_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeE-2q76-a5iv8mpGKlkYmu13ct-87mVYczdy37zuZVhzBsK4VS8OpeOIjfLMnBE8rKi3gLAOTititcBFRs5zdi9&_nc_ohc=TqwDY_L-ZqMQ7kNvgHFI1cI&_nc_ht=scontent.fktm3-1.fna&_nc_gid=A67k3Ej8cTl233koMrr7LAQ&oh=00_AYBaCEdUsZrGPP9BLbR45pMv4tfiyhjMtHKubp2pmlVlOg&oe=66EDDC6A",
+        "https://www.bihebazaar.com/uploads/2019/12/3-233.jpg"
+    ];
+
+    const snacksMenu = {
+        veg: {
+            potato: {
+                fry: [
+                    { id: 'v1', name: 'Mustang Potato', image: 'https://images.unsplash.com/photo-1623238913973-21e45cced554?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80', description: 'Crispy potato strips seasoned with Himalayan spices' },
+                    { id: 'v2', name: 'Crispy Potato', image: 'https://images.unsplash.com/photo-1585109649139-366815a0d713?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80', description: 'Thinly sliced potatoes fried to golden perfection' },
+                ],
+                marinate: [
+                    { id: 'v3', name: 'Chips Chilly', image: 'https://images.unsplash.com/photo-1599490659213-e2b9527bd087?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80', description: 'Spicy marinated potato chips' },
+                    { id: 'v4', name: 'Himalayan Potato', image: 'https://images.unsplash.com/photo-1518013431117-eb1465fa5752?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80', description: 'Potato chunks marinated in Himalayan herbs' },
+                ],
+            },
+            mushroom: {
+                fry: [
+                    { id: 'v5', name: 'Crispy Mushroom', image: 'https://images.unsplash.com/photo-1607877742574-a483adcf3d3c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80', description: 'Battered and fried mushroom caps' },
+                ],
+                marinate: [
+                    { id: 'v6', name: 'Garlic Mushroom', image: 'https://images.unsplash.com/photo-1625944525533-473f1a3d54e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80', description: 'Mushrooms marinated in garlic and herbs' },
+                ],
+            },
+            tofu: {
+                fry: [
+                    { id: 'v7', name: 'Crispy Tofu', image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80', description: 'Deep-fried tofu cubes with a crispy exterior' },
+                ],
+                marinate: [
+                    { id: 'v8', name: 'Spicy Tofu', image: 'https://images.unsplash.com/photo-1546877625-cb8c71916608?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80', description: 'Tofu marinated in spicy sauce' },
+                ],
+            },
+        },
+        meat: {
+            buff: {
+                fry: [
+                    { id: 'm1', name: 'Buff Fry', image: 'https://images.unsplash.com/photo-1603360946369-dc9bb6258143?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80', description: 'Crispy fried buffalo meat' },
+                ],
+                marinate: [
+                    { id: 'm2', name: 'Buff Chilly', image: 'https://images.unsplash.com/photo-1625937286074-9ca519d5d9df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80', description: 'Spicy marinated buffalo meat' },
+                ],
+            },
+            fish: {
+                fry: [
+                    { id: 'm3', name: 'Fish Fry', image: 'https://images.unsplash.com/photo-1594804233323-808eacf6ef78?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80', description: 'Crispy fried fish fillet' },
+                ],
+                marinate: [
+                    { id: 'm4', name: 'Grilled Fish', image: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80', description: 'Marinated and grilled fish' },
+                ],
+            },
+            chicken: {
+                fry: [
+                    { id: 'm5', name: 'Fried Chicken', image: 'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80', description: 'Crispy fried chicken pieces' },
+                ],
+                marinate: [
+                    { id: 'm6', name: 'Tandoori Chicken', image: 'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80', description: 'Chicken marinated in yogurt and tandoori spices' },
+                ],
+            },
+        },
+    };
+
+    let currentImageIndex = 0;
+    const sliderImage = document.querySelector('#image-slider img');
+    const sliderDots = document.getElementById('slider-dots');
+    let selectedFoods = [];
+    let currentTab = 'snacks';
+
+    function updateSlider() {
+        sliderImage.src = venueImages[currentImageIndex];
+        updateDots();
+    }
+
+    function updateDots() {
+        sliderDots.innerHTML = '';
+        venueImages.forEach((_, index) => {
+            const dot = document.createElement('button');
+            dot.className = `w-3 h-3 rounded-full mx-1 ${index === currentImageIndex ? 'bg-white' : 'bg-gray-300'}`;
+            dot.onclick = () => {
+                currentImageIndex = index;
+                updateSlider();
+            };
+            sliderDots.appendChild(dot);
+        });
+    }
+    function scrollToMenu() {
+        const menuSection = document.getElementById('menu-section');
+        menuSection.scrollIntoView({ behavior: 'smooth' });
+    }
+    document.getElementById('view-menu-btn').addEventListener('click', scrollToMenu);
+
+    function renderFoodItems(items) {
+        return items.map(item => `
+                <div class="bg-white rounded-lg shadow-md p-4 mb-4">
+                    <div class="flex items-center space-x-4">
+                        <img src="${item.image}" alt="${item.name}" class="w-20 h-20 rounded-lg object-cover">
+                        <div class="flex-1">
+                            <h5 class="text-lg font-medium text-purple-800">${item.name}</h5>
+                            <p class="text-sm text-gray-600">${item.description}</p>
+                        </div>
+                        <input type="checkbox" ${selectedFoods.includes(item.id) ? 'checked' : ''} onchange="handleFoodSelection('${item.id}')">
+                    </div>
+                </div>
+            `).join('');
+    }
+
+    function renderFoodCategory(category, title) {
+        return `
+                <div class="mt-4">
+                    <h4 class="text-xl font-semibold mb-2 text-purple-800">${title}</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <h5 class="text-lg font-medium mb-2 text-pink-600">Fry Items</h5>
+                            ${renderFoodItems(category.fry)}
+                        </div>
+                        <div>
+                            <h5 class="text-lg font-medium mb-2 text-pink-600">Marinate Items</h5>
+                            ${renderFoodItems(category.marinate)}
+                        </div>
+                    </div>
+                </div>
+            `;
+    }
+
+    function renderMenu() {
+        const menuContent = document.getElementById('menu-content');
+        if (currentTab === 'snacks') {
+            menuContent.innerHTML = `
+                    <div class="mt-4">
+                        <h3 class="text-2xl font-bold mb-4 text-purple-800">Vegetarian Items</h3>
+                        ${renderFoodCategory(snacksMenu.veg.potato, 'Potato')}
+                        ${renderFoodCategory(snacksMenu.veg.mushroom, 'Mushroom')}
+                        ${renderFoodCategory(snacksMenu.veg.tofu, 'Tofu')}
+                    </div>
+                    <div class="mt-8">
+                        <h3 class="text-2xl font-bold mb-4 text-purple-800">Meat Items</h3>
+                        ${renderFoodCategory(snacksMenu.meat.buff, 'Buff')}
+                        ${renderFoodCategory(snacksMenu.meat.fish, 'Fish')}
+                        ${renderFoodCategory(snacksMenu.meat.chicken, 'Chicken')}
+                    </div>
+                `;
+        } else if (currentTab === 'breakfast') {
+            menuContent.innerHTML = '<p class="text-purple-800">Breakfast menu content goes here.</p>';
+        } else if (currentTab === 'dinner') {
+            menuContent.innerHTML = '<p class="text-purple-800">Dinner menu content goes here.</p>';
+        }
+        updateSelectedItems();
+    }
+
+    function handleFoodSelection(itemId) {
+        if (selectedFoods.includes(itemId)) {
+            selectedFoods = selectedFoods.filter(id => id !== itemId);
+        } else {
+            selectedFoods.push(itemId);
+        }
+        updateSelectedItems();
+    }
+
+    function updateSelectedItems() {
+        const selectedItemsContainer = document.getElementById('selected-items');
+        const allItems = [
+            ...Object.values(snacksMenu.veg).flatMap(category => [...category.fry, ...category.marinate]),
+            ...Object.values(snacksMenu.meat).flatMap(category => [...category.fry, ...category.marinate])
+        ];
+        const selectedItems = selectedFoods.map(id => allItems.find(item => item.id === id)).filter(Boolean);
+        const vegItems = selectedItems.filter(item => item.id.startsWith('v'));
+        const meatItems = selectedItems.filter(item => item.id.startsWith('m'));
+
+        let content = `<h4 class="font-semibold mb-2">${currentTab.charAt(0).toUpperCase() + currentTab.slice(1)}</h4>`;
+
+        if (vegItems.length > 0) {
+            content += `
+                    <h5 class="font-medium mt-4 mb-2">Vegetarian Items:</h5>
+                    <ul class="list-disc list-inside">
+                        ${vegItems.map(item => `<li>${item.name}</li>`).join('')}
+                    </ul>
+                `;
+            if (vegItems.length > 3) {
+                content += `
+                        <div class="mt-2 bg-yellow-100 border-yellow-400 p-2 rounded">
+                            <p class="text-yellow-800 font-bold">Warning</p>
+                            <p class="text-yellow-700">Extra cost will be applied for more than 3 vegetarian items.</p>
+                        </div>
+                    `;
+            }
+        }
+
+        if (meatItems.length > 0) {
+            content += `
+                    <h5 class="font-medium mt-4 mb-2">Meat Items:</h5>
+                    <ul class="list-disc list-inside">
+                        ${meatItems.map(item => `<li>${item.name}</li>`).join('')}
+                    </ul>
+                `;
+            if (meatItems.length > 3) {
+                content += `
+                        <div class="mt-2 bg-yellow-100 border-yellow-400 p-2 rounded">
+                            <p class="text-yellow-800 font-bold">Warning</p>
+                            <p class="text-yellow-700">Extra cost will be applied for more than 3 meat items.</p>
+                        </div>
+                    `;
+            }
+        }
+
+        selectedItemsContainer.innerHTML = content;
+    }
+
+    function changeTab(tab) {
+        currentTab = tab;
+        renderMenu();
+        document.querySelectorAll('.bg-purple-200 button').forEach(button => {
+            if (button.textContent.toLowerCase() === tab) {
+                button.classList.add('bg-purple-400', 'text-white');
+            } else {
+                button.classList.remove('bg-purple-400', 'text-white');
+            }
+        });
+    }
+
+    updateSlider();
+    renderMenu();
+</script>
+</body>
+</html>
